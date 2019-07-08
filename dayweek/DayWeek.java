@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Zeller {
+public class DayWeek {
 	private static String[] dow = { "土", "日", "月", "火", "水", "木", "金" };
 
 	public static void main(String[] args) {
@@ -16,7 +16,9 @@ public class Zeller {
 		System.out.println(date + " " + dow[zeller(y, m, d)] + "曜日");
 	}
 	public static int zeller(int y, int m, int d) {
-		if(y < 0) y += 1;
+		// 参考: https://ja.wikipedia.org/wiki/%E3%83%84%E3%82%A7%E3%83%A9%E3%83%BC%E3%81%AE%E5%85%AC%E5%BC%8F
+		if(y < 0)
+			y += 1;
 		if(m <= 2) {
 			y -= 1;
 			m += 12;
